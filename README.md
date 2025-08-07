@@ -1,6 +1,6 @@
 # Installation
 
-### Run each command from the root directory of the project
+#### Run each command from the root directory of the project
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/MartinNachev255/AppGreat-FullStack-project.git
