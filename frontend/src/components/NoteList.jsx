@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import NoteItem from "./NoteItem"
 import noteService from '../util'
 import NewNoteForm from "./NewNoteForm"
+import { Box } from "@mui/material"
 
 const NoteList = () => {
     const [notes, setNotes] = useState([])
@@ -40,12 +41,22 @@ const NoteList = () => {
     }
 
     return (
-        <div>
+        <Box 
+            sx={{ 
+                width: '100%', 
+                maxWidth: 360, 
+                bgcolor: 'background.paper', 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center',
+                margin: '0 auto'
+            }}
+        >
             <NewNoteForm addNote={addNote}/>
             {notes.map(note => 
                 <NoteItem key={note.id} note={note} deleteNote={deleteNote} updateNote={updateNote}/>
             )}
-        </div>
+        </Box>
     )
 }
 
